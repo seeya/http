@@ -19,3 +19,4 @@ http.createServer(function(req, res) {
 }).listen(8888);
 
 console.log("Server listening on port 8888");
+console.log("Just new update");
