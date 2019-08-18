@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: http-deploy 
+  labels:
+    app: http 
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: http 
+      tier: web
+  template:
+    metadata:
+      labels:
+        app: http 
+        tier: web
+    spec:
+      containers:
+      - name: test-http 
+        image: bizkits/http 
+        ports:
+        - containerPort: 8888
+
